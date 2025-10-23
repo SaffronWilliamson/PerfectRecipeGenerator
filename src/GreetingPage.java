@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class GreetingPage {
-    public static void main(String[] args) {
+    public static boolean showGreetingPage() {
         //import scanner
         Scanner scanner = new Scanner(System.in);
         //welcome message
@@ -13,18 +13,18 @@ public class GreetingPage {
         System.out.println("Thank you " + firstName + ", are you ready to find your perfect recipe?");
         System.out.print("Please enter yes or no: ");
         //provide a message if they want to continue or close the programme if they don't
-        String answer;
-        do {
-            answer = scanner.nextLine();
+
+        while (true) {
+            String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("yes")) {
-                System.out.println("Great! Let's get started.");
-                break;
+                System.out.println("Great! Let's get started...");
+                return true;
             } else if (answer.equalsIgnoreCase("no")) {
                 System.out.println("Okay, maybe next time. Goodbye!");
-                return;
+                return false;
             } else {
                 System.out.println("Invalid input. Please enter yes or no.");
             }
-        } while (true);
+        }
     }
 }
