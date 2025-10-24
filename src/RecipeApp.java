@@ -17,7 +17,7 @@ public class RecipeApp {
 
 
         while (repeatProgramme) {
-            System.out.println("Are you vegetarian or vegan? (yes/no)");
+            System.out.println("\nAre you vegetarian or vegan? (yes/no)");
             String vegetarian = scanner.nextLine();
 
             System.out.println("Do you like spicy food? (yes/no)");
@@ -28,9 +28,9 @@ public class RecipeApp {
 
             //display recipe names
             String recipe;
-            if (vegetarian.equalsIgnoreCase("yes") && spicy.equals("yes")) {
+            if (vegetarian.equalsIgnoreCase("yes") && spicy.equalsIgnoreCase("yes")) {
                 recipe = "Spicy veg recipe";
-            } else if (vegetarian.equalsIgnoreCase("yes") && sweet.equals("yes")) {
+            } else if (vegetarian.equalsIgnoreCase("yes") && sweet.equalsIgnoreCase("yes")) {
                 recipe = "Sweet veg recipe";
             } else if (vegetarian.equalsIgnoreCase("yes")) {
                 recipe = "mild Vegetarian recipe";
@@ -62,3 +62,4 @@ public class RecipeApp {
 //remember ignore case when pulling the scanner answers
 //error handling
 // add emojis
+// maybe change to only ask if they like sweet food if they say they don't like spicy
