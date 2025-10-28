@@ -5,7 +5,7 @@ public class GreetingPage {
         //import scanner
         Scanner scanner = new Scanner(System.in);
         //welcome message
-        System.out.println("Welcome to the Perfect Recipe Generator! \uD83C\uDF54 ");
+        System.out.println("Welcome to the Perfect Recipe Generator! \uD83E\uDDD1\u200D\uD83C\uDF73");
         //first name
         System.out.print("Before we start, please enter your first name: ");
         String firstName = scanner.nextLine();
